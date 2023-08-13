@@ -1,39 +1,31 @@
-/* 基本样式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-
 header {
-    background-color: #333;
+    background-color: #539938;
     color: #fff;
     padding: 1rem;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
 }
-
 nav li {
     margin-right: 1rem;
 }
-
 nav a {
     text-decoration: none;
     color: #fff;
 }
-
-.hero {
-    background-image: url("hero-bg.jpg");
-    background-size: cover;
-    color: #fff;
+.container {
     text-align: center;
-    padding: 5rem 0;
+    width: 408px;
+    font-family: "Microsoft YaHei";
+    color: #855d4d;
 }
-
 .cta-button {
     display: inline-block;
     background-color: #3498db;
@@ -43,11 +35,9 @@ nav a {
     text-decoration: none;
     border-radius: 4px;
 }
-
 .featured {
     padding: 2rem;
 }
-
 footer {
     text-align: center;
     padding: 1rem;
