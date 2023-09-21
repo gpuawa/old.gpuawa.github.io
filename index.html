@@ -1,29 +1,438 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPUCraft</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="images/logo.png">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="resources.html">教程</a></li>
-                <li><a href="tutorial.html">资源</a></li>
-                <li><a href="https://github.com/gpuawa">联系站长</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <h1>欢迎来到GPUcraft！</h1>
-        <p>终于等到你ヾ(≧▽≦*)o</p>
-    </div>
-    <section class="featured">
-        <h2>精选内容</h2>
-    </section>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<script src="layui/layui.js"></script>
+		<style>
+			.part {
+				float: left;
+				margin-left: -2rem;
+
+			}
+
+			.layui-tree-set:hover {
+				text-underline-offset: inherit;
+				background-color: blanchedalmond;
+				height: 1.5rem;
+			}
+
+			.layui-icon-file {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main1" class="part">
+			combat/战斗
+		</div>
+		<div id="main2" class="part">
+			player/玩家
+		</div>
+		<div id="main3" class="part">
+			movement/移动
+		</div>
+		<div id="main4" class="part">
+			render/渲染
+		</div>
+		<div id="main5" class="part">
+			world/世界
+		</div>
+		<div id="main6" class="part">
+			misc/杂项
+		</div>
+	</body>
+	<script>
+		layui.use('tree', function() {
+			layui.use('tree', function() {
+				var tree = layui.tree;
+				tree.render({
+					elem: '#main1',
+
+					data: [{
+						title: 'combat/战斗',
+						spread: 'true',
+						children: [{
+							title: 'Aim Assit-准星瞄准'
+						}, {
+							title: 'Anchor Aura-重生锚光环'
+						}, {
+							title: 'Anti Anchor-反重生锚'
+						}, {
+							title: 'Anti Anvil-反铁砧'
+						}, {
+							title: 'Anti Bed-反床'
+						}, {
+							title: 'Arrow Dodge-躲箭'
+						}, {
+							title: 'Auto Anvil-自动刷铁砧'
+						}, {
+							title: 'Auto Arnor-自动穿甲'
+						}, {
+							title: 'Auto City-自动挖黑曜石'
+						}, {
+							title: 'Auto Log-自动下线'
+						}, {
+							title: 'Auto Totem-自动图腾'
+						}, {
+							title: 'Auto Trap-方块堵人'
+						}, {
+							title: 'Auto Weapon-自动武器'
+						}, {
+							title: 'Auto Web-蜘蛛网困人'
+						}, {
+							title: 'Bed Aura-床光环'
+						}, {
+							title: 'Bow Aimbot-自动瞄准'
+						}, {
+							title: 'Bow Spam-自动发射弓'
+						}, {
+							title: 'Burrow-卡方块'
+						}, {
+							title: 'Criticals-刀暴'
+						}, {
+							title: 'Crystal Aura-水晶光环'
+						}, {
+							title: 'Hitboxes-碰撞体积调整'
+						}, {
+							title: 'Hole Fillter-自动填坑'
+						}, {
+							title: 'Kill Aura-杀戮光环'
+						}, {
+							title: 'Offhand Extra-副手自动装备'
+						}, {
+							title: 'Quiver-药箭射自己'
+						}, {
+							title: 'Self Anvil-铁砧埋自己'
+						}, {
+							title: 'Self Trap-头顶放方块'
+						}, {
+							title: 'Self Web-蜘蛛网挡自己'
+						}, {
+							title: 'Surround-围挡自己'
+						}]
+					}]
+				});
+				tree.render({
+					elem: '#main2',
+					data: [{
+						title: 'player/玩家',
+						spread: 'true',
+						children: [{
+							title: 'Air Place-空中放方块 '
+						}, {
+							title: 'Anti Afk-挂机防踢'
+						}, {
+							title: 'Anti Hunger-反饥饿'
+						}, {
+							title: 'Auto Clicker-连点'
+						}, {
+							title: 'Auto Eat-自动吃食物'
+						}, {
+							title: 'Auto Fish-自动钓鱼'
+						}, {
+							title: 'Auto Gap-自动金苹果'
+						}, {
+							title: 'Auto Mend-自动经验修补'
+						}, {
+							title: 'Auto Replenish-自动装填'
+						}, {
+							title: 'Auto Respawn-自动重生'
+						}, {
+							title: 'Auto Tool-自动工具'
+						}, {
+							title: 'Break delay-挖掘后摇'
+						}, {
+							title: 'Chest Swap-胸甲鞘翅切换'
+						}, {
+							title: 'Exp Thrower-丢经验瓶'
+						}, {
+							title: 'Fake Player-假人'
+						}, {
+							title: 'Ghost Hand-鬼手'
+						}, {
+							title: 'Liquid Interact-液体上放置'
+						}, {
+							title: 'Middle Click Extra-中键额外功能'
+						}, {
+							title: 'Name Protect-假玩家名'
+						}, {
+							title: 'No Interact-右键不放方块'
+						}, {
+							title: 'No Mining Trace-隔实体挖矿'
+						}, {
+							title: 'No Rotate-屏蔽旋转'
+						}, {
+							title: 'Protals-传送门打开GUI'
+						}, {
+							title: 'Potion Saver-节省药水时间'
+						}, {
+							title: 'Potion Spoof-假药buff'
+						}, {
+							title: 'Reach-距离'
+						}, {
+							title: 'Rotation-固定视角方向'
+						}, {
+							title: 'Speed Mine-挖掘加速'
+						}]
+					}]
+				})
+				tree.render({
+					elem: '#main3',
+					data: [{
+						title: 'movement/移动',
+						spread: 'true',
+						children: [{
+							title: 'Air Jump-空中跳'
+						}, {
+							title: 'Anchor-不动'
+						}, {
+							title: 'Anti Levitation-反漂浮'
+						}, {
+							title: 'Anti Void-反虚空'
+						}, {
+							title: 'Auto Jump-自动跳跃'
+						}, {
+							title: 'Auto Walk-自动跑图'
+						}, {
+							title: 'Blink-网卡闪现移动'
+						}, {
+							title: 'Boat Fly-飞船'
+						}, {
+							title: 'Click Tp-右键传送'
+						}, {
+							title: 'Elytra Boost-鞘翅提升'
+						}, {
+							title: 'Elytra Fly-鞘翅平飞'
+						}, {
+							title: 'Entity Control-实体控制'
+						}, {
+							title: 'Entity Speed-骑乘加速'
+						}, {
+							title: 'Fast Climb-快速攀爬'
+						}, {
+							title: 'Flight-飞行'
+						}, {
+							title: 'Gui Move-开GUI时界面移动'
+						}, {
+							title: 'High Jump-高跳'
+						}, {
+							title: 'Jesus-水上漂'
+						}, {
+							title: 'Long Jump-远跳'
+						}, {
+							title: 'No Fall-无摔落伤害'
+						}, {
+							title: 'No Slow-无减速'
+						}, {
+							title: 'Parkour-跑酷自动跳'
+						}, {
+							title: 'Reverse Step-快速落地'
+						}, {
+							title: 'Safe walk-安全走路'
+						}, {
+							title: 'Scaffold-脚手架'
+						}, {
+							title: 'Slippy-旱地溜冰'
+						}, {
+							title: 'Speed-加速'
+						}, {
+							title: 'Spider-蜘蛛爬墙'
+						}, {
+							title: 'Sprint-自动疾跑'
+						}, {
+							title: 'Step-自动越障'
+						}, {
+							title: 'Trident Boost-激流附魔提升'
+						}, {
+							title: 'Velocity-防被动移动'
+						}]
+					}]
+				})
+				tree.render({
+					elem: '#main4',
+					data: [{
+						title: 'render/渲染',
+						spread: 'true',
+						children: [{
+							title: 'beter Tooltips-更好的提示框'
+						}, {
+							title: 'Block Esp-方块透视'
+						}, {
+							title: 'Block Selection-选中方块样式'
+						}, {
+							title: 'Blur-GUI背景模糊'
+						}, {
+							title: 'Boss Stack-BOSS条堆叠'
+						}, {
+							title: 'BreadCrumbs-小尾巴'
+						}, {
+							title: 'Break Indicators-自定义挖掘效果'
+						}, {
+							title: 'Camera Clip-F5视角调整'
+						}, {
+							title: 'Chams-实体透视'
+						}, {
+							title: 'City Esp-挖掘透视'
+						}, {
+							title: 'Entity Owner-实体的主人'
+						}, {
+							title: 'Esp-另一种实体透视'
+						}, {
+							title: 'Free Look-自由视野范围'
+						}, {
+							title: 'Freecam-灵魂出窍'
+						}, {
+							title: 'Fullbright-夜视'
+						}, {
+							title: 'Hand View-手部物品调整'
+						}, {
+							title: 'Hole Esp-坑洞透视'
+						}, {
+							title: 'Item Heiglight-背包物品高亮'
+						}, {
+							title: 'Item Physics-物品物理掉落'
+						}, {
+							title: 'Light Overlay-刷怪区域显示'
+						}, {
+							title: 'Logout Spots-其他玩家下线点'
+						}, {
+							title: 'Marker-圆圈投影'
+						}, {
+							title: 'Nametags-名字标签'
+						}, {
+							title: 'No Render-不渲染部分效果'
+						}, {
+							title: 'Pop Chams-爆图腾渲染'
+						}, {
+							title: 'Storage Esp-箱透'
+						}, {
+							title: 'Time Changer-自定义时间'
+						}, {
+							title: 'Tracers-实体连线透视'
+						}, {
+							title: 'Trail-粒子效果小尾巴'
+						}, {
+							title: 'Trajectories-显示抛物线'
+						}, {
+							title: 'Unfocused Cpu-挂机游戏降帧数'
+						}, {
+							title: 'Void Es-p虚空透视'
+						}, {
+							title: 'Wall Hack-方块透明'
+						}, {
+							title: 'Waypoints-显示路径点'
+						}, {
+							title: 'Xray-矿透'
+						}, {
+							title: 'Zoom-缩放'
+						}]
+					}]
+				})
+				tree.render({
+					elem: '#main5',
+					data: [{
+						title: 'world/世界',
+						spread: 'true',
+						children: [{
+							title: 'Ambience-调整环境颜色'
+						}, {
+							title: 'Auto Breed-自动喂动物'
+						}, {
+							title: 'Auto BreWer-自动酿药'
+						}, {
+							title: 'Auto Mount-自动骑乘'
+						}, {
+							title: 'Auto Nametag-自动命名'
+						}, {
+							title: 'Auto Shearer-自动剪羊毛'
+						}, {
+							title: 'Auto Sing-自动告示牌'
+						}, {
+							title: 'Auto Smelter-自动烧炼物品'
+						}, {
+							title: 'Build Height-建筑高度可互动'
+						}, {
+							title: 'Collsions-不碰部分方块'
+						}, {
+							title: 'Echest Farmer-末影箱回收'
+						}, {
+							title: 'Enderman Look-看/避免看末影人'
+						}, {
+							title: 'Flamethrower-打火石烧动物'
+						}, {
+							title: 'HighwayBuilder-高速机器人'
+						}, {
+							title: 'Infinity Miner-超级矿工'
+						}, {
+							title: 'Liquid Filter-填充附近液体'
+						}, {
+							title: 'Mount Bypass-可超堆叠nbt物品'
+						}, {
+							title: 'No Ghost Blocks-无幽灵方块'
+						}, {
+							title: 'Nuker-打破周围方块'
+						}, {
+							title: 'Packet Mine-通过发包的方式挖掘'
+						}, {
+							title: 'Spawn Proofer-自动放方块'
+						}, {
+							title: 'Stash Finder-记录存储物品方块的位置'
+						}, {
+							title: 'Timer-加速'
+						}, {
+							title: 'Vein Miner-连续挖方块'
+						}]
+					}]
+				})
+				tree.render({
+					elem: '#main6',
+					data: [{
+						title: 'misc/杂项',
+						spread: 'true',
+						children: [{
+							title: 'Anti Packet Kick-防大量发包被踢'
+						}, {
+							title: 'Auto Reconnect-自动重连'
+						}, {
+							title: 'Better Beacons-更好信标效果'
+						}, {
+							title: 'Better Chat-优化聊天/聊天后缀'
+						}, {
+							title: 'better Tab-优化玩家列表'
+						}, {
+							title: 'Book Bot-自动写书'
+						}, {
+							title: 'Discord Presemce-discord信息'
+						}, {
+							title: 'Inventory Tweakes-背包界面加强'
+						}, {
+							title: 'Msessahe Aura-消息光环'
+						}, {
+							title: 'Middle click Friend-中键添加/移除好友'
+						}, {
+							title: 'Notebot-音符盒弹音乐'
+						}, {
+							title: 'Notifier-事件通知'
+						}, {
+
+							title: 'Offhand Crash-主副手狂换物品'
+						}, {
+							title: 'Packet Canceller-拦截数据包'
+						}, {
+							title: 'Vanillia Spoof-伪装原版'
+						}, {
+							title: 'Sound Blocker-屏蔽声音'
+						}, {
+							title: 'Spam-聊天栏刷屏'
+						}, {
+							title: 'Swarm-控制一群小号当苦力'
+						}]
+					}]
+				})
+
+			});
+		});
+	</script>
 </html>
